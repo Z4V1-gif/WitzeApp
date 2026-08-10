@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Scribble&family=Rye&display=swap');
+
+
+
+
+$primary-color:#353738;
+$secondary-color:#4c4f52;
+
+
+body {
+    font-family:'Inter',sans-serif ;
+    background-color: $primary-color;
+    color: #f6f6f6;
+    font-size: 1.25rem;
+}
+
+.header {
+    color:#32cd32;
+    font-family:'Rubik Scribble', system-ui;
+    font-weight: bolder;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+
+    &__sub {
+        font-family:'Rubik Scribble', system-ui;
+        font-size: 2rem;
+
+    }
+}
+
+.current-joke {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $secondary-color;
+    padding: 2rem;
+    margin: 2rem;
+
+    &__text {
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    &__loadButton {
+        border: #32cd32 solid;
+        border-radius: 6px;
+        padding: 0.8rem;
+        margin: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #32cd32;
+        min-width: 200px;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba( 0 0 0.15);
+        }
+    }
+
+    &__newButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: #32cd32 solid;
+        border-radius: 6px;
+        padding: 0.8rem;
+        margin: 1rem;
+        font-size: 1rem;
+        color: #32cd32;
+        font-weight: bold;
+        background-color: transparent;
+        min-width: 200px;
+        cursor: pointer;
+
+         &:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba( 0 0 0.15);
+        }
+
+    }
+}
+
+.saved-jokes {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__jokes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: $secondary-color;
+    }
+
+    &__icons {
+        width: 27px;
+        height: 27px;
+        background-color: red;
+        padding: 0.25rem;
+        cursor: pointer;
+    }
+}
