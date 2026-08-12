@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Scribble&family=Rye&display=swap');
+@use "variables" as *;
 
-
-
-
-$primary-color:#353738;
-$secondary-color:#4c4f52;
-
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family:'Inter',sans-serif ;
     background-color: $primary-color;
-    color: #f6f6f6;
+    color: #fff;
     font-size: 1.25rem;
 }
 
 .header {
+    margin-top: 2rem;
     color:#32cd32;
     font-family:'Rubik Scribble', system-ui;
     font-weight: bolder;
@@ -53,7 +52,7 @@ body {
         margin-top: 1rem;
     }
 
-    &__loadButton {
+    &__new {
         border: #32cd32 solid;
         border-radius: 6px;
         padding: 0.8rem;
@@ -70,7 +69,7 @@ body {
         }
     }
 
-    &__newButton {
+    &__save{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -89,6 +88,9 @@ body {
          &:hover {
             transform: translateY(-3px); 
             box-shadow: 0 10px 20px rgba( 0 0 0.15);
+            background-color:#32cd32;
+            color: black;
+            font-weight: bold;
         }
 
     }
@@ -104,6 +106,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
         gap: 1rem;
         padding: 1rem;
         margin: 1rem;
@@ -116,5 +119,16 @@ body {
         background-color: red;
         padding: 0.25rem;
         cursor: pointer;
+
+    }
+
+     &__delete {
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        
     }
 }
