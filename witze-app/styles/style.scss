@@ -9,21 +9,21 @@ body {
     font-family:'Inter',sans-serif ;
     background-color: $primary-color;
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .header {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color:#32cd32;
     font-family:'Rubik Scribble', system-ui;
     font-weight: bolder;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
 
     &__sub {
         font-family:'Rubik Scribble', system-ui;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
     }
 }
@@ -34,8 +34,8 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: $secondary-color;
-    padding: 2rem;
-    margin: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 
     &__text {
         overflow-wrap: break-word;
@@ -49,6 +49,8 @@ body {
 
     &__actions {
         display: flex;
+        flex-direction: column;
+        gap: 1rem;
         margin-top: 1rem;
     }
 
@@ -56,11 +58,10 @@ body {
         border: #32cd32 solid;
         border-radius: 6px;
         padding: 0.8rem;
-        margin: 1rem;
         font-size: 1rem;
         font-weight: bold;
         background-color: #32cd32;
-        min-width: 200px;
+        width: 100%;
         cursor: pointer;
 
         &:hover {
@@ -77,12 +78,11 @@ body {
         border: #32cd32 solid;
         border-radius: 6px;
         padding: 0.8rem;
-        margin: 1rem;
         font-size: 1rem;
         color: #32cd32;
         font-weight: bold;
         background-color: transparent;
-        min-width: 200px;
+        width: 100%;
         cursor: pointer;
 
          &:hover {
@@ -130,5 +130,51 @@ body {
         display: flex;
         padding: 0;
         
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.25rem; /* Original-Größe */
+    }
+
+    .header {
+        margin-top: 2rem; /* Original-Abstand */
+        font-size: 3.5rem; /* Original-Größe */
+
+        &__sub {
+            font-size: 2rem; /* Original-Größe */
+        }
+    }
+
+    .current-joke {
+        padding: 2rem; /* Original-Abstand */
+        margin: 2rem auto; /* Zentriert mit Auto und 2rem Abstand */
+        max-width: 800px; /* Optional: Verhindert, dass die Karte auf Riesen-Monitoren zu breit wird */
+
+        &__actions {
+            flex-direction: row; /* Buttons wieder nebeneinander */
+            justify-content: center;
+            width: auto;
+        }
+
+        &__new {
+            width: auto;
+            min-width: 200px; /* Original-Breite */
+            margin: 1rem; /* Original-Abstand */
+        }
+
+        &__save {
+            width: auto;
+            min-width: 200px; /* Original-Breite */
+            margin: 1rem; /* Original-Abstand */
+        }
+    }
+
+    .saved-jokes {
+        &__jokes {
+            margin: 1rem;
+            max-width: 800px; /* Begrenzt auch hier die Breite auf großen Bildschirmen */
+        }
     }
 }
