@@ -1,4 +1,4 @@
-import { fetchJoke } from '../../fetch';
+import { fetchJoke } from '../fetch';
 import '../styles/style.scss';
 
 
