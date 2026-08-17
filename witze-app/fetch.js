@@ -1,6 +1,7 @@
 //HTML Elemente auswählen
 const jokeTextElement = document.querySelector('.current-joke__text');
 const newJokeButton = document.querySelector('.current-joke__new');
+const saveJokeButton = document.querySelector('.current-joke__save');
 
 
 // Fetch Funktion 
@@ -9,6 +10,8 @@ export async function fetchJoke() {
         //Ladetext
 
         jokeTextElement.textContent = "Witz wird geladen...";
+
+        saveJokeButton.computedStyleMap.display = "none";
 
         //Witze-API aufrufen
         const response = await fetch ('https://witzapi.de/api/joke/');
@@ -28,6 +31,8 @@ export async function fetchJoke() {
 
         //vorherigen Witz überschreiben
         jokeTextElement.textContent = newJoke;
+
+        saveJokeButton.style.display = "flex";
 
     } catch (error) {
         console.error("Fehler beim Laden des Witzes:", error);
