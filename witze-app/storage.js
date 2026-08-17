@@ -39,6 +39,11 @@ export function saveCurrentJoke() {
 function renderSavedJokes() {
     savedJokesContainer.innerHTML = '<h2 class="header__sub">Gespeicherte Witze</h2>';
 
+    if (savedJokesList.length === 0) {
+        savedJokesContainer.innerHTML += '<em style="text-align:center; margin-top:1rem">Du hast noch keine Witze gespeichert!</em>';
+        return;
+    }
+
     savedJokesList.forEach((joke, index) => {
         const jokeCard = document.createElement('div');
         jokeCard.className = 'saved-jokes__jokes';
