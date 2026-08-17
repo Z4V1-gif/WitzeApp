@@ -11,7 +11,7 @@ export async function fetchJoke() {
 
         jokeTextElement.textContent = "Witz wird geladen...";
 
-        saveJokeButton.computedStyleMap.display = "none";
+        saveJokeButton.style.display = "none";
 
         //Witze-API aufrufen
         const response = await fetch ('https://witzapi.de/api/joke/');

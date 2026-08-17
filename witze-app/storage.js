@@ -11,8 +11,8 @@ export function loadJokesFromLocalStorage() {
     const storedJokes = localStorage.getItem('mySavedJokes');
     if (storedJokes) {
         savedJokesList = JSON.parse(storedJokes);
-        renderSavedJokes();
     }
+    renderSavedJokes();
 }
 
 
